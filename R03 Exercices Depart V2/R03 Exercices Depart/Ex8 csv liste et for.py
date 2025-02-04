@@ -3,7 +3,7 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 
 # Importez csv
 
-
+import csv
  
 
 # Vous utiliserez encore le fichier "Ex7 Lan Party.csv"
@@ -53,4 +53,8 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 #      En dehors de toute boucle, utilisez sorted() pour trier la liste et obtenir une nouvelle liste triée
 #      Imprimez votre nouvelle liste triée
 
-
+with open("csvs/Ex7 Lan Party.csv","r", encoding="utf-8") as lecturefichier :
+    read = csv.reader(lecturefichier,delimiter=',')
+    jeux = []
+    for ligne in read :
+        pass

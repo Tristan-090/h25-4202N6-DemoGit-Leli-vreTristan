@@ -13,7 +13,7 @@ import csv
 # Faites un petit script qui ouvre le fichier csv en mode lecture et qui affiche uniquement les offres ou la demande de Diplôme a la valeur 'Dec' ou 'Non déterminé'
 
 
-with open('c:/Users/trist/Desktop/R03 Exercices Depart/csvs/Ex4 Emplois Reseautique.csv','r',encoding='utf-8') as fichierLu:
+with open('csvs/Ex4 Emplois Reseautique.csv','r',encoding='utf-8') as fichierLu:
     lire = csv.reader(fichierLu,delimiter=";")
     row = []
     for i in lire:
