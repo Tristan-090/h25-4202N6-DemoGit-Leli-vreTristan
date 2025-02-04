@@ -2,6 +2,7 @@ import os                             # N'enlevez pas ces lignes.
 os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans le répertoire de ce script
 
 # Importez csv
+
 import csv
 
  
@@ -16,6 +17,8 @@ import csv
 # 
 #          Aucune instruction détaillée n'est donnée plus bas
 
-
-
-
+with open("csvs/Ex7 Lan Party.csv","r", encoding="utf-8" ) as lirefichierparty :
+    read = csv.reader(lirefichierparty,delimiter=';')
+    for list in read :
+        if  list == 'Valorant' :
+            print(list)

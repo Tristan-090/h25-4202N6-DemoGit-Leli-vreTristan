@@ -49,3 +49,9 @@ import csv
 #Faites une boucle pour passer à travers chacune des lignes du fichier
 #Si l'exigence est  'Exigé' imprimez cette ligne
 
+
+with open("csvs/Ex6 Competences.csv","r", encoding="utf-8" ) as lirefichiercsv :
+    read = csv.reader(lirefichiercsv,delimiter='/')
+    for a in read :
+        if  a[2] == 'Exigé':
+            print(a)

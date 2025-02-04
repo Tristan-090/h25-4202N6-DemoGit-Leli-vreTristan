@@ -25,18 +25,19 @@ import csv
 ficher_a_lire = os.path.join("csvs", "Ex5 Stages.csv")
 
 
-with open("c:/Users/trist/Desktop/R03 Exercices Depart/csvs/Ex5 Stages.csv","r", encoding="utf-8" ) as fichiercsv :
+with open("csvs/Ex5 Stages.csv","r", encoding="utf-8" ) as fichiercsv :
     read = csv.reader(fichiercsv,delimiter='|')
 
     for list in read:
         print(list)
 
-        with open("c:/Users/trist/Desktop/R03 Exercices Depart/Ex5 Stages TI.csv","w", encoding="utf-8" ) as fichiercsv1 :
+        with open("Ex5 Stages TI.csv","w", encoding="utf-8" ) as fichiercsv1 :
             write = csv.writer(fichiercsv1,delimiter='\n')
             write.writerow(["stage TI"])
             for a in read:
-                if  'TI' in ['TI']:
-                    print(f"{write.writerow(['TI'])}")
+                if  a[2] == 'TI' :
+                    print(f"{write.writerow([a])}")
+                    
         
     
     
