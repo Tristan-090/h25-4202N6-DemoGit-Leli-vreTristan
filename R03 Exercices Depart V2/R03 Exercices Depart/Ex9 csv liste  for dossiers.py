@@ -2,7 +2,7 @@ import os                             # N'enlevez pas ces lignes.
 os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans le répertoire de ce script
 
 # Importez csv
-
+import csv
 
  
 
@@ -50,7 +50,38 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 #      Pour le nom de chaque jeu: changez le ':' pour un '_' et gardez juste les 20 premiers caractères
 #      Créez un dossier pour le jeu avec le nouveau nom de jeu
 #      Revenez au dossier parent
+import os
 
+jeuxvide= []
+mot = []
+with open("csvs/Ex7 Lan Party.csv","r", encoding="utf-8") as readfichierEx9:
+    read = csv.reader(readfichierEx9,delimiter=';')
+    os.makedirs("Lan Party",exist_ok= True)
+    next(read)
+    os.chdir("Lan Party")
+    for ligne in read :
+        ligneV2 = ligne[1:]
+        for split in ligneV2 :
+            split = split.replace(':','_')
+            if  jeuxvide.count(split) == 0 :
+                    jeuxvide.append(split)
+                    
+                    os.makedirs(split,exist_ok=True)
+                    print(split)
+        
+
+                    
+
+                
+                        
+
+                
+        
             
-
-
+# for lettre in split :
+#                     if lettre == ':':
+#                         lettre = '_'
+#                         print(lettre)
+#                     else :
+#                         mot += lettre
+#                         print(lettre)

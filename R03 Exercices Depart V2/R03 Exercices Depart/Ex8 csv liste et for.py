@@ -54,7 +54,17 @@ import csv
 #      Imprimez votre nouvelle liste triée
 
 with open("csvs/Ex7 Lan Party.csv","r", encoding="utf-8") as lecturefichier :
-    read = csv.reader(lecturefichier,delimiter=',')
+    read = csv.reader(lecturefichier,delimiter=';')
+    next(read)
     jeux = []
     for ligne in read :
-        pass
+        ligneV2 = ligne[1:] #slicing pour garder juste les 3 a droite
+        for  jeu in ligneV2 : #la boucle passe par tous (allo) et ensuite dans jeu
+            if jeux.count(jeu) == 0:#la fonction count compte combien de fois la variable jeu est dans la liste
+                jeux.append(jeu) #On l'ajoute a la fin
+                print(jeu)
+                
+                
+        
+
+        
