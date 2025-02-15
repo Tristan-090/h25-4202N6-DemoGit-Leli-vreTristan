@@ -50,6 +50,7 @@ import csv
 #      Pour le nom de chaque jeu: changez le ':' pour un '_' et gardez juste les 20 premiers caractères
 #      Créez un dossier pour le jeu avec le nouveau nom de jeu
 #      Revenez au dossier parent
+
 import os
 
 jeuxvide= []
@@ -65,7 +66,6 @@ with open("csvs/Ex7 Lan Party.csv","r", encoding="utf-8") as readfichierEx9:
             split = split.replace(':','_')
             if  jeuxvide.count(split) == 0 :
                     jeuxvide.append(split)
-                    
                     os.makedirs(split,exist_ok=True)
                     print(split)
         
